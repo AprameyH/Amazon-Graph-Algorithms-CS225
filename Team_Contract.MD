@@ -21,3 +21,4 @@ We will decide as a group on what we wish to accomplish during the next meeting.
 If there is a disagreement between members, we will give each member the opportunity to state their case and then, if they still can't come to an agreement, we will hold a vote to determine who was right. If one member is not attending the meetings and not completing their work, we will first approach him privately and ask if there are any issues that are preventing them from completing their work. If we can still not come to an aggreement, we will contact our mentor on furter steps.
 
 anshulb3 - Anshul Bheemreddy
+apramey2 - Apramey Hosahalli
