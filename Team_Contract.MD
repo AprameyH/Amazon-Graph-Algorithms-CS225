@@ -23,3 +23,5 @@ If there is a disagreement between members, we will give each member the opportu
 anshulb3 - Anshul Bheemreddy
 <br />
 apramey2 - Apramey Hosahalli
+<br />
+rduquet2 - Ryan Duquet
