@@ -37,3 +37,4 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 add_executable(test-parsing ${SOURCES} ${TEST_SOURCES})
 target_link_libraries(test-parsing ParsingLib Catch2::Catch2)
+set(CMAKE_BUILD_TYPE Debug)

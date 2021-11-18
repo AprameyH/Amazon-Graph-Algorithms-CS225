@@ -20,3 +20,4 @@ project(Railroad VERSION 1.0)
 
 add_subdirectory(parsing)
 add_subdirectory(adder)
+set(CMAKE_BUILD_TYPE Debug)

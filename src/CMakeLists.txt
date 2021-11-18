@@ -24,4 +24,5 @@ target_link_libraries(main Utils)
 
 # link_directories("../parsing" "../bfs" "../a_star")
 # target_link_libraries(main Utils ParsingLib BFSLib AStarLib) # <-- Automatically sets the correct include directories!!
+set(CMAKE_BUILD_TYPE Debug)
 
