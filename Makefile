@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bnguyen4/Desktop/cpp-project-template
+CMAKE_SOURCE_DIR = /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bnguyen4/Desktop/cpp-project-template
+CMAKE_BINARY_DIR = /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bnguyen4/Desktop/cpp-project-template/CMakeFiles /home/bnguyen4/Desktop/cpp-project-template/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3/CMakeFiles /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bnguyen4/Desktop/cpp-project-template/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
