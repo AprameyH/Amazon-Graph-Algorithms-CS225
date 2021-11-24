@@ -232,6 +232,36 @@ src/node.cpp.s:
 	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/node.cpp.s
 .PHONY : src/node.cpp.s
 
+src/parser_header.o: src/parser_header.cpp.o
+
+.PHONY : src/parser_header.o
+
+# target to build an object file
+src/parser_header.cpp.o:
+	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/parser_header.cpp.o
+	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/parser_header.cpp.o
+.PHONY : src/parser_header.cpp.o
+
+src/parser_header.i: src/parser_header.cpp.i
+
+.PHONY : src/parser_header.i
+
+# target to preprocess a source file
+src/parser_header.cpp.i:
+	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/parser_header.cpp.i
+	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/parser_header.cpp.i
+.PHONY : src/parser_header.cpp.i
+
+src/parser_header.s: src/parser_header.cpp.s
+
+.PHONY : src/parser_header.s
+
+# target to generate assembly for a file
+src/parser_header.cpp.s:
+	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/parser_header.cpp.s
+	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/parser_header.cpp.s
+.PHONY : src/parser_header.cpp.s
+
 tests/test.o: tests/test.cpp.o
 
 .PHONY : tests/test.o
@@ -303,6 +333,9 @@ help:
 	@echo "... src/node.o"
 	@echo "... src/node.i"
 	@echo "... src/node.s"
+	@echo "... src/parser_header.o"
+	@echo "... src/parser_header.i"
+	@echo "... src/parser_header.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
