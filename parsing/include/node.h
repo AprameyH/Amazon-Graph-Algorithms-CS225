@@ -30,14 +30,13 @@ namespace Parser {
        */
       unsigned getID();
 
-
-      static unsigned num_nodes_;
-      std::vector<Node*> neighbors;
-
       void addNeighbor(Node* neighbor);
+
+      std::vector<Node*> getNeighbors();
 
     private:
         unsigned id_ = 0;
-  
+        static unsigned num_nodes_;
+        std::vector<Node*> neighbors;
   };
 }

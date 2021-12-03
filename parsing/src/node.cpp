@@ -23,4 +23,8 @@ namespace Parser {
     void Node::addNeighbor(Node* neighbor) {
         neighbors.push_back(neighbor);
     }
+
+    std::vector<Node*> Node::getNeighbors() {
+        return neighbors;
+    }
 }

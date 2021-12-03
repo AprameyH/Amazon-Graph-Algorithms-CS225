@@ -27,6 +27,10 @@ namespace Parser {
 
     std::unordered_map<int, Node>& getNodes();
 
+    std::vector<Node*> getNeighbors(int id);
+
+
+
 
     private:
 
