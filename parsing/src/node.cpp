@@ -5,9 +5,11 @@ using std::string;
 namespace Parser {
     unsigned Node::num_nodes_;
     
-    Node::Node(string data) {
-        id_ = num_nodes_++;
-        data_ = data;
+    Node::Node(int id) {
+        id_ = id;
+    }
+    Node::Node() {
+        
     }
 
     Node::~Node() {
@@ -18,7 +20,7 @@ namespace Parser {
         return id_;
     }
 
-    string Node::getData() {
-        return data_;
+    void Node::addNeighbor(Node* neighbor) {
+        neighbors.push_back(neighbor);
     }
 }

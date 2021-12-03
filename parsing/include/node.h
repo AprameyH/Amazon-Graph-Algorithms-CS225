@@ -2,21 +2,42 @@
 
 #include <stdint.h>
 #include <string>
+#include "edge.h"
+#include <vector>
 
 namespace Parser {
 
-class Node {
+  class Node {
     public:
-        Node(std::string data);
-        ~Node();
+      /**
+       * @brief Construct a new Node object.
+       * 
+       * @param id 
+       */
+      Node(int id);
+      Node();
 
-        unsigned getID();
-        std::string getData();
+      /**
+       * @brief Destroy the Node object
+       * 
+       */
+      ~Node();
 
-        static unsigned num_nodes_;
+      /**
+       * @brief Get the ID for the Node.
+       * 
+       * @return unsigned 
+       */
+      unsigned getID();
+
+
+      static unsigned num_nodes_;
+      std::vector<Node*> neighbors;
+
+      void addNeighbor(Node* neighbor);
 
     private:
         unsigned id_ = 0;
-        std::string data_ = "";
-};
+  
+  };
 }

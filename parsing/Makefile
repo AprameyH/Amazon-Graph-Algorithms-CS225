@@ -182,6 +182,33 @@ main.cpp.s:
 	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/main-parsing.dir/build.make parsing/CMakeFiles/main-parsing.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/graph.o: src/graph.cpp.o
+.PHONY : src/graph.o
+
+# target to build an object file
+src/graph.cpp.o:
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/graph.cpp.o
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/graph.cpp.o
+.PHONY : src/graph.cpp.o
+
+src/graph.i: src/graph.cpp.i
+.PHONY : src/graph.i
+
+# target to preprocess a source file
+src/graph.cpp.i:
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/graph.cpp.i
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/graph.cpp.i
+.PHONY : src/graph.cpp.i
+
+src/graph.s: src/graph.cpp.s
+.PHONY : src/graph.s
+
+# target to generate assembly for a file
+src/graph.cpp.s:
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/graph.cpp.s
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/graph.cpp.s
+.PHONY : src/graph.cpp.s
+
 src/node.o: src/node.cpp.o
 .PHONY : src/node.o
 
@@ -208,33 +235,6 @@ src/node.cpp.s:
 	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/node.cpp.s
 	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/node.cpp.s
 .PHONY : src/node.cpp.s
-
-src/parser_header.o: src/parser_header.cpp.o
-.PHONY : src/parser_header.o
-
-# target to build an object file
-src/parser_header.cpp.o:
-	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/parser_header.cpp.o
-	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/parser_header.cpp.o
-.PHONY : src/parser_header.cpp.o
-
-src/parser_header.i: src/parser_header.cpp.i
-.PHONY : src/parser_header.i
-
-# target to preprocess a source file
-src/parser_header.cpp.i:
-	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/parser_header.cpp.i
-	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/parser_header.cpp.i
-.PHONY : src/parser_header.cpp.i
-
-src/parser_header.s: src/parser_header.cpp.s
-.PHONY : src/parser_header.s
-
-# target to generate assembly for a file
-src/parser_header.cpp.s:
-	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/parser_header.cpp.s
-	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/parser_header.cpp.s
-.PHONY : src/parser_header.cpp.s
 
 tests/test.o: tests/test.cpp.o
 .PHONY : tests/test.o
@@ -298,12 +298,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/graph.o"
+	@echo "... src/graph.i"
+	@echo "... src/graph.s"
 	@echo "... src/node.o"
 	@echo "... src/node.i"
 	@echo "... src/node.s"
-	@echo "... src/parser_header.o"
-	@echo "... src/parser_header.i"
-	@echo "... src/parser_header.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
