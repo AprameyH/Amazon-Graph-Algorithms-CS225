@@ -42,4 +42,22 @@ namespace Parser {
         }
         inputFile.close();
   }
+
+  std::unordered_map<int, std::unordered_map<int, int>> Graph::BFS() {
+      std::unordered_map<int, std::unordered_map<int, int>> map;
+      return map;
+    //   for (auto& node: nodes) {
+    //         BFS(node.getId());
+            
+    //     }
+  }
+
+  std::unordered_map<int, int> Graph::BFS(int start_id) {
+      std::unordered_map<int, int> dist_from_root;
+      return dist_from_root;
+  }
+
+  std::unordered_map<int, Node>& Graph::getNodes() {
+      return nodes;
+  }
 }

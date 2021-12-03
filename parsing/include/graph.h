@@ -19,6 +19,14 @@ namespace Parser {
 
     void readData(string filename);
 
+    // preform bfs on the graph and return hashmap of hashmaps which takes in the index of a node as the key with a hashamp of
+    // distance to other reachable nodes as the value.
+    std::unordered_map<int, std::unordered_map<int, int>> BFS();
+
+    std::unordered_map<int, int> BFS(int start_id);
+
+    std::unordered_map<int, Node>& getNodes();
+
 
     private:
 
