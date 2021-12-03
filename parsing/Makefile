@@ -182,6 +182,33 @@ main.cpp.s:
 	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/main-parsing.dir/build.make parsing/CMakeFiles/main-parsing.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/edge.o: src/edge.cpp.o
+.PHONY : src/edge.o
+
+# target to build an object file
+src/edge.cpp.o:
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/edge.cpp.o
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/edge.cpp.o
+.PHONY : src/edge.cpp.o
+
+src/edge.i: src/edge.cpp.i
+.PHONY : src/edge.i
+
+# target to preprocess a source file
+src/edge.cpp.i:
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/edge.cpp.i
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/edge.cpp.i
+.PHONY : src/edge.cpp.i
+
+src/edge.s: src/edge.cpp.s
+.PHONY : src/edge.s
+
+# target to generate assembly for a file
+src/edge.cpp.s:
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/src/edge.cpp.s
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/ParsingLib.dir/build.make parsing/CMakeFiles/ParsingLib.dir/src/edge.cpp.s
+.PHONY : src/edge.cpp.s
+
 src/graph.o: src/graph.cpp.o
 .PHONY : src/graph.o
 
@@ -298,6 +325,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/edge.o"
+	@echo "... src/edge.i"
+	@echo "... src/edge.s"
 	@echo "... src/graph.o"
 	@echo "... src/graph.i"
 	@echo "... src/graph.s"

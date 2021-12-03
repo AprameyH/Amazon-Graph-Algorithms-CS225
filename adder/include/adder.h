@@ -1,17 +1,17 @@
-#pragma once
+// #pragma once
 
-#include "parser_header.h"
-#include <string>
+// #include "parser_header.h"
+// #include <string>
 
-using Parser::Node;
+// using Parser::Node;
 
-namespace Adder {
-class Adder {
-    public:
-        Adder(Node n, Node n2);
-        std::string getResult();
+// namespace Adder {
+// class Adder {
+//     public:
+//         Adder(Node n, Node n2);
+//         std::string getResult();
 
-    private:
-        std::string result_ = "";
-};
-}
+//     private:
+//         std::string result_ = "";
+// };
+// }

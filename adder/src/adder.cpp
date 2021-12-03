@@ -1,14 +1,14 @@
-#include "../include/adder.h"
+// #include "../include/adder.h"
 
-using Parser::Node;
+// using Parser::Node;
 
-namespace Adder {
+// namespace Adder {
     
-    Adder::Adder(Node n, Node n2) {
-        result_ = n.getData() + n2.getData();
-    }
+//     Adder::Adder(Node n, Node n2) {
+//         result_ = n.getData() + n2.getData();
+//     }
 
-    std::string Adder::getResult() {
-        return result_;
-    }
-}
+//     std::string Adder::getResult() {
+//         return result_;
+//     }
+// }

@@ -1,25 +1,25 @@
-#include "../include/edge.h"
+// #include "../include/edge.h"
 
-namespace Parser {
-    Edge::Edge(Node * source, Node * dest) {
-        _source = source;
-        _dest = dest;
-    }
+// namespace Parser {
+//     Edge::Edge(Node * source, Node * dest) {
+//         _source = source;
+//         _dest = dest;
+//     }
 
-    Edge::~Edge() {
-        delete _source;
-        delete _dest;
-    }
+//     Edge::~Edge() {
+//         delete _source;
+//         delete _dest;
+//     }
 
-    unsigned Edge::getID() {
-        return id;
-    }
+//     unsigned Edge::getID() {
+//         return id;
+//     }
 
-    Node * Edge::getSource() {
-        return _source;
-    }
+//     Node * Edge::getSource() {
+//         return _source;
+//     }
 
-    Node * Edge::getDestination() {
-        return _dest;
-    }
-}
+//     Node * Edge::getDestination() {
+//         return _dest;
+//     }
+// }
