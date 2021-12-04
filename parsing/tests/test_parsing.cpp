@@ -45,11 +45,11 @@ TEST_CASE("Test Parsing to Find Neighbor Nodes") {
     }
 
 
-    SECTION("Test Amazon data") {
-        std::string filename = "../data/amazon0601.txt";
-        Graph graph(filename);
-        std::unordered_map<int, Node> &nodes = graph.getNodes();
-        int size = nodes.size();
-        REQUIRE(size == 403394);
-    }
+    // SECTION("Test Amazon data") {
+    //     std::string filename = "../data/amazon0601.txt";
+    //     Graph graph(filename);
+    //     std::unordered_map<int, Node> &nodes = graph.getNodes();
+    //     int size = nodes.size();
+    //     REQUIRE(size == 403394);
+    // }
 }

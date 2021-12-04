@@ -319,6 +319,33 @@ tests/test.cpp.s:
 	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test.cpp.s
 .PHONY : tests/test.cpp.s
 
+tests/test_BFS.o: tests/test_BFS.cpp.o
+
+.PHONY : tests/test_BFS.o
+
+# target to build an object file
+tests/test_BFS.cpp.o:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_BFS.cpp.o
+.PHONY : tests/test_BFS.cpp.o
+
+tests/test_BFS.i: tests/test_BFS.cpp.i
+
+.PHONY : tests/test_BFS.i
+
+# target to preprocess a source file
+tests/test_BFS.cpp.i:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_BFS.cpp.i
+.PHONY : tests/test_BFS.cpp.i
+
+tests/test_BFS.s: tests/test_BFS.cpp.s
+
+.PHONY : tests/test_BFS.s
+
+# target to generate assembly for a file
+tests/test_BFS.cpp.s:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_BFS.cpp.s
+.PHONY : tests/test_BFS.cpp.s
+
 tests/test_node.o: tests/test_node.cpp.o
 
 .PHONY : tests/test_node.o
@@ -399,6 +426,9 @@ help:
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_BFS.o"
+	@echo "... tests/test_BFS.i"
+	@echo "... tests/test_BFS.s"
 	@echo "... tests/test_node.o"
 	@echo "... tests/test_node.i"
 	@echo "... tests/test_node.s"
