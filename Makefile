@@ -194,6 +194,45 @@ AdderLib/fast:
 	$(MAKE) $(MAKESILENT) -f adder/CMakeFiles/AdderLib.dir/build.make adder/CMakeFiles/AdderLib.dir/build
 .PHONY : AdderLib/fast
 
+#=============================================================================
+# Target rules for targets named test-algorithm
+
+# Build rule for target.
+test-algorithm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-algorithm
+.PHONY : test-algorithm
+
+# fast build rule for target.
+test-algorithm/fast:
+	$(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/build
+.PHONY : test-algorithm/fast
+
+#=============================================================================
+# Target rules for targets named main-algorithm
+
+# Build rule for target.
+main-algorithm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main-algorithm
+.PHONY : main-algorithm
+
+# fast build rule for target.
+main-algorithm/fast:
+	$(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/main-algorithm.dir/build.make algorithm/CMakeFiles/main-algorithm.dir/build
+.PHONY : main-algorithm/fast
+
+#=============================================================================
+# Target rules for targets named algorithmLib
+
+# Build rule for target.
+algorithmLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 algorithmLib
+.PHONY : algorithmLib
+
+# fast build rule for target.
+algorithmLib/fast:
+	$(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/build
+.PHONY : algorithmLib/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -204,9 +243,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AdderLib"
 	@echo "... ParsingLib"
+	@echo "... algorithmLib"
 	@echo "... main-adder"
+	@echo "... main-algorithm"
 	@echo "... main-parsing"
 	@echo "... test-adder"
+	@echo "... test-algorithm"
 	@echo "... test-parsing"
 .PHONY : help
 
