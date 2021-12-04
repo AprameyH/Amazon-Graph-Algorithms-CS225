@@ -33,8 +33,6 @@ TEST_CASE("Test Parsing to Find Neighbor Nodes") {
         REQUIRE(nodeTwoNeighbors[0]->getID() == 6);
         std::vector<Node*> nodeSevenNeighbors = nodes[7].getNeighbors();
     }
-<<<<<<< HEAD
-=======
 
     SECTION("Test Graph 3: disconnected graph") {
         std::string filename = "../parsing/tests/test_graph3.txt";
@@ -54,5 +52,4 @@ TEST_CASE("Test Parsing to Find Neighbor Nodes") {
     //     int size = nodes.size();
     //     REQUIRE(size == 403394);
     // }
->>>>>>> 1cfe624 (fises)
 }
