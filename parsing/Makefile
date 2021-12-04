@@ -288,30 +288,27 @@ tests/test.cpp.s:
 .PHONY : tests/test.cpp.s
 
 tests/test_BFS.o: tests/test_BFS.cpp.o
-
 .PHONY : tests/test_BFS.o
 
 # target to build an object file
 tests/test_BFS.cpp.o:
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_BFS.cpp.o
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_BFS.cpp.o
 .PHONY : tests/test_BFS.cpp.o
 
 tests/test_BFS.i: tests/test_BFS.cpp.i
-
 .PHONY : tests/test_BFS.i
 
 # target to preprocess a source file
 tests/test_BFS.cpp.i:
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_BFS.cpp.i
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_BFS.cpp.i
 .PHONY : tests/test_BFS.cpp.i
 
 tests/test_BFS.s: tests/test_BFS.cpp.s
-
 .PHONY : tests/test_BFS.s
 
 # target to generate assembly for a file
 tests/test_BFS.cpp.s:
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_BFS.cpp.s
+	cd /home/brownie/Coding/CS_225/final_project && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_BFS.cpp.s
 .PHONY : tests/test_BFS.cpp.s
 
 tests/test_node.o: tests/test_node.cpp.o

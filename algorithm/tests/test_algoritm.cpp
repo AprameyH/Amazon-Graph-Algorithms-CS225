@@ -1,5 +1,4 @@
 #include "catch2/catch.hpp"
-#include "include/adder.h"
 
 
 TEST_CASE("algo tests") {

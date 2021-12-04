@@ -9,7 +9,7 @@ using namespace std;
 
 TEST_CASE("BFS") {
     SECTION("BFS on simple undirected graph") {
-        std::string filename = "../parsing/tests/test_graph1.txt";
+        std::string filename = "./tests/test_graph1.txt";
         Graph graph(filename);
         std::unordered_map<int, int> distances = graph.BFS(0);
         
@@ -22,7 +22,7 @@ TEST_CASE("BFS") {
     }
 
     SECTION("BFS on directed graph") {
-        std::string filename = "../parsing/tests/test_graph2.txt";
+        std::string filename = "./tests/test_graph2.txt";
         Graph graph(filename);
         std::unordered_map<int, Node> &nodes = graph.getNodes();
         std::vector<Node*> nodeZeroNeighbors = nodes[0].getNeighbors();
@@ -33,7 +33,7 @@ TEST_CASE("BFS") {
     }
 
     SECTION("bfs on unconnected graph") {
-        std::string filename = "../parsing/tests/test_graph3.txt";
+        std::string filename = "./tests/test_graph3.txt";
         Graph graph(filename);
         std::unordered_map<int, Node> &nodes = graph.getNodes();
         std::vector<Node*> nodeTwoNeighbors = nodes[2].getNeighbors();

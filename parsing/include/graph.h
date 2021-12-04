@@ -15,9 +15,9 @@ namespace Parser {
   class Graph {
     public:
 
-    Graph(string fileName);
+    Graph(string filePath);
 
-    void readData(string filename);
+    void readData(string filePath);
 
     // preform bfs on the graph and return hashmap of hashmaps which takes in the index of a node as the key with a hashamp of
     // distance to other reachable nodes as the value.

@@ -27,4 +27,6 @@ namespace Parser {
     std::vector<Node*> Node::getNeighbors() {
         return neighbors;
     }
+
+    
 }
