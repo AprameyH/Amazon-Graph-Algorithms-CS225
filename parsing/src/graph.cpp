@@ -2,6 +2,7 @@
 #include <vector>
 #include <boost/algorithm/string.hpp>
 #include <fstream>
+#include "../tests/test_graph1.txt"
 #include <iostream>
 
 namespace Parser {
@@ -11,19 +12,27 @@ namespace Parser {
   }
 
   void Graph::readData(string filename) {
+    std::cout << filename << std::endl;
     string line;
     
-        std::ifstream inputFile(filename);
-        if (inputFile.is_open()) {
+        
+        inputFile.open(filename);
+        if (!inputFile) {
+          std::cout<<"File is open"<<std::endl;
           while (getline(inputFile, line)) {
               //if line doesn't begin with #
+              std::cout << line << std::endl;
               if (line.rfind("#", 0) != 0) {
                 std::vector<string> result;
                 //split string by tab using boost
+                std::cout << "test" << std::endl;
                 split(result, line, boost::algorithm::is_any_of("\t"));
+                std::cout << "test" << std::endl;
                 if (result.size() > 1) {
                   int sourceIndex = stoi(result[0]);
+                  std::cout << sourceIndex << std::endl;
                   int destIndex = stoi(result[1]);
+                  std::cout << destIndex << std::endl;
                   if (nodes.find(sourceIndex) == nodes.end()) {
                     Node source(sourceIndex);
                     std::pair<int, Node> sourcePair = std::make_pair(sourceIndex, source);

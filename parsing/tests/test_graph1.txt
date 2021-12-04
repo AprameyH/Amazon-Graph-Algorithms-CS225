@@ -1,4 +1,4 @@
-# FromNodeId    ToNodeId
+# FromNodeId ToNodeId
 0   1
 0   4
 1   4
