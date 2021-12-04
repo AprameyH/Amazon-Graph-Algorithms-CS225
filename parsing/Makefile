@@ -346,6 +346,33 @@ tests/test_node.cpp.s:
 	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_node.cpp.s
 .PHONY : tests/test_node.cpp.s
 
+tests/test_parsing.o: tests/test_parsing.cpp.o
+
+.PHONY : tests/test_parsing.o
+
+# target to build an object file
+tests/test_parsing.cpp.o:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_parsing.cpp.o
+.PHONY : tests/test_parsing.cpp.o
+
+tests/test_parsing.i: tests/test_parsing.cpp.i
+
+.PHONY : tests/test_parsing.i
+
+# target to preprocess a source file
+tests/test_parsing.cpp.i:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_parsing.cpp.i
+.PHONY : tests/test_parsing.cpp.i
+
+tests/test_parsing.s: tests/test_parsing.cpp.s
+
+.PHONY : tests/test_parsing.s
+
+# target to generate assembly for a file
+tests/test_parsing.cpp.s:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f parsing/CMakeFiles/test-parsing.dir/build.make parsing/CMakeFiles/test-parsing.dir/tests/test_parsing.cpp.s
+.PHONY : tests/test_parsing.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -375,6 +402,9 @@ help:
 	@echo "... tests/test_node.o"
 	@echo "... tests/test_node.i"
 	@echo "... tests/test_node.s"
+	@echo "... tests/test_parsing.o"
+	@echo "... tests/test_parsing.i"
+	@echo "... tests/test_parsing.s"
 .PHONY : help
 
 

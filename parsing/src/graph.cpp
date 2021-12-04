@@ -28,7 +28,8 @@ namespace Parser {
                     Node source(sourceIndex);
                     std::pair<int, Node> sourcePair = std::make_pair(sourceIndex, source);
                     nodes.insert(sourcePair);
-                  } else if (nodes.find(destIndex) == nodes.end()) {
+                  }
+                  if (nodes.find(destIndex) == nodes.end()) {
                     Node dest(destIndex);
                     std::pair<int, Node> destPair = std::make_pair(destIndex, dest);
                     nodes.insert(destPair);
@@ -46,9 +47,11 @@ namespace Parser {
   std::unordered_map<int, std::unordered_map<int, int>> Graph::BFS() {
       std::unordered_map<int, std::unordered_map<int, int>> map;
       for (auto& node: nodes) {
-            BFS(node.getId());
-            
+          int node_id = node.second.getID();
+          //map.insert(std::make_pair<int, std::unordered_map<int, int>>(node_id, BFS(node_id)));
+          map.insert({node_id, BFS(node_id)});
         }
+      return map;
   }
 
   std::unordered_map<int, int> Graph::BFS(int start_id) {
@@ -58,5 +61,9 @@ namespace Parser {
 
   std::unordered_map<int, Node>& Graph::getNodes() {
       return nodes;
+  }
+  
+  std::vector<Node*> Graph::getNeighbors(int id) {
+    return nodes[id].getNeighbors();
   }
 }
