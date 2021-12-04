@@ -18,6 +18,7 @@ endif()
 # https://stackoverflow.com/questions/43862273/cmake-c-include-relative-to-base-directory
 project(Railroad VERSION 1.0)
 
+# add_subdirectory(betweenness_centrality)
 add_subdirectory(parsing)
 add_subdirectory(adder)
 set(CMAKE_BUILD_TYPE Debug)
