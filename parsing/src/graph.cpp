@@ -2,8 +2,11 @@
 #include <vector>
 #include <boost/algorithm/string.hpp>
 #include <fstream>
-#include "../tests/test_graph1.txt"
 #include <iostream>
+#include <unistd.h>
+#include <stdio.h>
+
+using namespace std;
 
 namespace Parser {
 
@@ -15,10 +18,10 @@ namespace Parser {
     std::cout << filename << std::endl;
     string line;
     
-        
+        std::ifstream inputFile;
         inputFile.open(filename);
-        if (!inputFile) {
-          std::cout<<"File is open"<<std::endl;
+        if (inputFile) {
+        std::cout<<"name"<<std::endl;
           while (getline(inputFile, line)) {
               //if line doesn't begin with #
               std::cout << line << std::endl;

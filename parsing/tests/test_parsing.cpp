@@ -9,7 +9,7 @@ using namespace std;
 
 TEST_CASE("Test Parsing to Find Neighbor Nodes") {
     SECTION("Test Graph 1: Nodes 1 and 4") {
-        std::string filename = "../tests/test_graph1.txt";
+        std::string filename = "./tests/test_graph1.txt";
         Graph graph(filename);
         std::unordered_map<int, Node> &nodes = graph.getNodes();
         std::cout << nodes[1].getID() << std::endl;
