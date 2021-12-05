@@ -7,23 +7,21 @@ using Parser::Graph;
 using Parser::Node;
 using namespace std;
 
-TEST_CASE("Tdsaf") {
-    SECTION("Test Graph 1: Nodes 1 and 4") {
+TEST_CASE("BFS") {
+    SECTION("BFS on simple undirected graph") {
         std::string filename = "../parsing/tests/test_graph1.txt";
         Graph graph(filename);
-        std::unordered_map<int, Node> &nodes = graph.getNodes();
-        std::vector<Node*> nodeOneNeighbors = nodes[1].getNeighbors();
-        REQUIRE(nodeOneNeighbors[0]->getID() == 4);
-        REQUIRE(nodeOneNeighbors[1]->getID() == 3);
-        REQUIRE(nodeOneNeighbors[2]->getID() == 0);
-        REQUIRE(nodeOneNeighbors[3]->getID() == 2);
-        std::vector<Node*> nodeFourNeighbors = nodes[4].getNeighbors();
-        REQUIRE(nodeFourNeighbors[0]->getID() == 0);
-        REQUIRE(nodeFourNeighbors[1]->getID() == 1);
-        REQUIRE(nodeFourNeighbors[2]->getID() == 3);
+        std::unordered_map<int, int> distances = graph.BFS(0);
+        
+        REQUIRE(distances[4] == 1);
+        REQUIRE(distances[1] == 1);
+        REQUIRE(distances[2] == 2);
+        REQUIRE(distances[3] == 2);
+        REQUIRE(distances[0] == 0);
+
     }
 
-    SECTION("Tesadf") {
+    SECTION("BFS on directed graph") {
         std::string filename = "../parsing/tests/test_graph2.txt";
         Graph graph(filename);
         std::unordered_map<int, Node> &nodes = graph.getNodes();
@@ -34,7 +32,7 @@ TEST_CASE("Tdsaf") {
         std::vector<Node*> nodeSevenNeighbors = nodes[7].getNeighbors();
     }
 
-    SECTION("sf") {
+    SECTION("bfs on unconnected graph") {
         std::string filename = "../parsing/tests/test_graph3.txt";
         Graph graph(filename);
         std::unordered_map<int, Node> &nodes = graph.getNodes();
