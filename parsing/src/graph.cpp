@@ -3,6 +3,7 @@
 #include <boost/algorithm/string.hpp>
 #include <fstream>
 #include <iostream>
+#include <queue>
 
 namespace Parser {
 
@@ -52,8 +53,37 @@ namespace Parser {
         }
   }
 
+  // returns a hashmap with the key being a node id and the value being the distance from the start node to that particular node.
   std::unordered_map<int, int> Graph::BFS(int start_id) {
       std::unordered_map<int, int> dist_from_root;
+    
+      std::unordered_map<int, bool> visited_nodes;
+
+      std::queue<Node*> q;
+
+      // add start node and initial distance of start(0) to queue
+      dist_from_root[start_id] = 0;
+      q.push(&nodes[start_id]);
+
+      while(!q.empty()) {
+        Node* curr = q.front();
+        q.pop();
+
+        // mark node as visited
+        visited_nodes[curr->getID()] = true;
+
+        for (Node* neighbor : curr->getNeighbors()) {
+          // if neighbor is not visited
+          if (!visited_nodes[neighbor->getID()]) {
+             // visit neighbor, get distance for neighbor, and add to queue.
+             visited_nodes[neighbor->getID()] = true;
+             q.push(neighbor);
+             dist_from_root[neighbor->getID()] = dist_from_root[curr->getID()] + 1;
+          }
+
+        }
+
+      }
       return dist_from_root;
   }
 
