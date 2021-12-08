@@ -96,4 +96,8 @@ namespace Parser {
   std::vector<Node*> Graph::getNeighbors(int id) {
     return nodes[id].getNeighbors();
   }
+
+  int Graph::size() {
+    return nodes.size();
+  }
 }

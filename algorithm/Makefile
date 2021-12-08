@@ -202,35 +202,65 @@ main.cpp.s:
 	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/main-algorithm.dir/build.make algorithm/CMakeFiles/main-algorithm.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/adder.o: src/adder.cpp.o
+src/SCC.o: src/SCC.cpp.o
 
-.PHONY : src/adder.o
+.PHONY : src/SCC.o
 
 # target to build an object file
-src/adder.cpp.o:
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/adder.cpp.o
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/adder.cpp.o
-.PHONY : src/adder.cpp.o
+src/SCC.cpp.o:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/SCC.cpp.o
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/SCC.cpp.o
+.PHONY : src/SCC.cpp.o
 
-src/adder.i: src/adder.cpp.i
+src/SCC.i: src/SCC.cpp.i
 
-.PHONY : src/adder.i
+.PHONY : src/SCC.i
 
 # target to preprocess a source file
-src/adder.cpp.i:
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/adder.cpp.i
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/adder.cpp.i
-.PHONY : src/adder.cpp.i
+src/SCC.cpp.i:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/SCC.cpp.i
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/SCC.cpp.i
+.PHONY : src/SCC.cpp.i
 
-src/adder.s: src/adder.cpp.s
+src/SCC.s: src/SCC.cpp.s
 
-.PHONY : src/adder.s
+.PHONY : src/SCC.s
 
 # target to generate assembly for a file
-src/adder.cpp.s:
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/adder.cpp.s
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/adder.cpp.s
-.PHONY : src/adder.cpp.s
+src/SCC.cpp.s:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/SCC.cpp.s
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/SCC.cpp.s
+.PHONY : src/SCC.cpp.s
+
+src/centrality.o: src/centrality.cpp.o
+
+.PHONY : src/centrality.o
+
+# target to build an object file
+src/centrality.cpp.o:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/centrality.cpp.o
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/centrality.cpp.o
+.PHONY : src/centrality.cpp.o
+
+src/centrality.i: src/centrality.cpp.i
+
+.PHONY : src/centrality.i
+
+# target to preprocess a source file
+src/centrality.cpp.i:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/centrality.cpp.i
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/centrality.cpp.i
+.PHONY : src/centrality.cpp.i
+
+src/centrality.s: src/centrality.cpp.s
+
+.PHONY : src/centrality.s
+
+# target to generate assembly for a file
+src/centrality.cpp.s:
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/centrality.cpp.s
+	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/centrality.cpp.s
+.PHONY : src/centrality.cpp.s
 
 tests/test.o: tests/test.cpp.o
 
@@ -300,9 +330,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/adder.o"
-	@echo "... src/adder.i"
-	@echo "... src/adder.s"
+	@echo "... src/SCC.o"
+	@echo "... src/SCC.i"
+	@echo "... src/SCC.s"
+	@echo "... src/centrality.o"
+	@echo "... src/centrality.i"
+	@echo "... src/centrality.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
