@@ -29,6 +29,8 @@ namespace Parser {
 
     std::vector<Node*> getNeighbors(int id);
 
+    int size();
+
 
 
 
