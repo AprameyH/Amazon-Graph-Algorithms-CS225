@@ -3,10 +3,7 @@
 #include <boost/algorithm/string.hpp>
 #include <fstream>
 #include <iostream>
-#include <unistd.h>
-#include <stdio.h>
-
-using namespace std;
+#include <queue>
 
 namespace Parser {
 
@@ -15,27 +12,19 @@ namespace Parser {
   }
 
   void Graph::readData(string filename) {
-    std::cout << filename << std::endl;
     string line;
     
-        std::ifstream inputFile;
-        inputFile.open(filename);
-        if (inputFile) {
-        std::cout<<"name"<<std::endl;
+        std::ifstream inputFile(filename);
+        if (inputFile.is_open()) {
           while (getline(inputFile, line)) {
               //if line doesn't begin with #
-              std::cout << line << std::endl;
               if (line.rfind("#", 0) != 0) {
                 std::vector<string> result;
                 //split string by tab using boost
-                std::cout << "test" << std::endl;
                 split(result, line, boost::algorithm::is_any_of("\t"));
-                std::cout << "test" << std::endl;
                 if (result.size() > 1) {
                   int sourceIndex = stoi(result[0]);
-                  std::cout << sourceIndex << std::endl;
                   int destIndex = stoi(result[1]);
-                  std::cout << destIndex << std::endl;
                   if (nodes.find(sourceIndex) == nodes.end()) {
                     Node source(sourceIndex);
                     std::pair<int, Node> sourcePair = std::make_pair(sourceIndex, source);
@@ -58,15 +47,45 @@ namespace Parser {
 
   std::unordered_map<int, std::unordered_map<int, int>> Graph::BFS() {
       std::unordered_map<int, std::unordered_map<int, int>> map;
+      for (auto& node: nodes) {
+          int node_id = node.second.getID();
+          //map.insert(std::make_pair<int, std::unordered_map<int, int>>(node_id, BFS(node_id)));
+          map.insert({node_id, BFS(node_id)});
+        }
       return map;
-    //   for (auto& node: nodes) {
-    //         BFS(node.getId());
-            
-    //     }
   }
 
+  // returns a hashmap with the key being a node id and the value being the distance from the start node to that particular node.
   std::unordered_map<int, int> Graph::BFS(int start_id) {
       std::unordered_map<int, int> dist_from_root;
+    
+      std::unordered_map<int, bool> visited_nodes;
+
+      std::queue<Node*> q;
+
+      // add start node and initial distance of start(0) to queue
+      dist_from_root[start_id] = 0;
+      q.push(&nodes[start_id]);
+
+      while(!q.empty()) {
+        Node* curr = q.front();
+        q.pop();
+
+        // mark node as visited
+        visited_nodes[curr->getID()] = true;
+
+        for (Node* neighbor : curr->getNeighbors()) {
+          // if neighbor is not visited
+          if (!visited_nodes[neighbor->getID()]) {
+             // visit neighbor, get distance for neighbor, and add to queue.
+             visited_nodes[neighbor->getID()] = true;
+             q.push(neighbor);
+             dist_from_root[neighbor->getID()] = dist_from_root[curr->getID()] + 1;
+          }
+
+        }
+
+      }
       return dist_from_root;
   }
 
@@ -76,5 +95,9 @@ namespace Parser {
   
   std::vector<Node*> Graph::getNeighbors(int id) {
     return nodes[id].getNeighbors();
+  }
+
+  int Graph::size() {
+    return nodes.size();
   }
 }

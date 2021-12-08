@@ -68,10 +68,10 @@ RM = /usr/bin/cmake3 -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rduquet2/cs225_final_proj
+CMAKE_SOURCE_DIR = /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rduquet2/cs225_final_proj
+CMAKE_BINARY_DIR = /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake3 -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rduquet2/cs225_final_proj/CMakeFiles /home/rduquet2/cs225_final_proj/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3/CMakeFiles /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rduquet2/cs225_final_proj/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -208,6 +208,45 @@ AdderLib/fast:
 	$(MAKE) $(MAKESILENT) -f adder/CMakeFiles/AdderLib.dir/build.make adder/CMakeFiles/AdderLib.dir/build
 .PHONY : AdderLib/fast
 
+#=============================================================================
+# Target rules for targets named test-algorithm
+
+# Build rule for target.
+test-algorithm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-algorithm
+.PHONY : test-algorithm
+
+# fast build rule for target.
+test-algorithm/fast:
+	$(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/build
+.PHONY : test-algorithm/fast
+
+#=============================================================================
+# Target rules for targets named main-algorithm
+
+# Build rule for target.
+main-algorithm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main-algorithm
+.PHONY : main-algorithm
+
+# fast build rule for target.
+main-algorithm/fast:
+	$(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/main-algorithm.dir/build.make algorithm/CMakeFiles/main-algorithm.dir/build
+.PHONY : main-algorithm/fast
+
+#=============================================================================
+# Target rules for targets named algorithmLib
+
+# Build rule for target.
+algorithmLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 algorithmLib
+.PHONY : algorithmLib
+
+# fast build rule for target.
+algorithmLib/fast:
+	$(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/build
+.PHONY : algorithmLib/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -218,9 +257,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AdderLib"
 	@echo "... ParsingLib"
+	@echo "... algorithmLib"
 	@echo "... main-adder"
+	@echo "... main-algorithm"
 	@echo "... main-parsing"
 	@echo "... test-adder"
+	@echo "... test-algorithm"
 	@echo "... test-parsing"
 .PHONY : help
 

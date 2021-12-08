@@ -15,6 +15,11 @@ namespace Parser {
        * @param id 
        */
       Node(int id);
+
+      /**
+       * @brief Construct a new Node object
+       * 
+       */
       Node();
 
       /**
