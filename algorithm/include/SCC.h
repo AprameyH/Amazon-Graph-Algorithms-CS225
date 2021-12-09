@@ -20,5 +20,6 @@ class SCC {
 
     bool areConnected(int node1_id, int node2_id);
 
+    vector<int> getConnectedComponents();
     
 };

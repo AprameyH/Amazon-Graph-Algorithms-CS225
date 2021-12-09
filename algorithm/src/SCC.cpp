@@ -84,3 +84,6 @@ bool SCC::areConnected(int node1_id, int node2_id) {
     return lows[node1_id] == lows[node2_id];
 }
 
+vector<int> SCC::getConnectedComponents() {
+    return lows;
+}
