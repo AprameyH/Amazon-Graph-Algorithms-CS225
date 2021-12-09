@@ -9,7 +9,6 @@ Centrality::Centrality(Graph G) {
 }
 
 std::unordered_map<int, double> Centrality::nodeCentrality(Parser::Graph g) {
-  
   unordered_map<int, double> Cb;
   for (pair<int, Node> s : g.getNodes()) {
     stack<Node> S;

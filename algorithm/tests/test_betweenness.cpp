@@ -7,6 +7,7 @@ using namespace std;
 using namespace Parser;
 
 TEST_CASE("Betweenness test") {
+  
     SECTION("Sanity check", "[adder]") {
         int four = 4;
         std::cout<<"betweenness tests running"<<std::endl;

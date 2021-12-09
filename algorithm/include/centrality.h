@@ -30,6 +30,5 @@ class Centrality {
     std::unordered_map<int, double> betweenness;
 
     double getBetweenness(int nodeIdx);
-
     
 };

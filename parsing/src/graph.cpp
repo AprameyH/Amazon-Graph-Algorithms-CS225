@@ -48,7 +48,7 @@ namespace Parser {
   std::unordered_map<int, std::unordered_map<int, int>> Graph::BFS() {
       std::unordered_map<int, std::unordered_map<int, int>> map;
       for (auto& node: nodes) {
-            BFS(node.getId());
+            BFS(node.first);
             
         }
   }
