@@ -40,3 +40,4 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 add_executable(test-algorithm ${SOURCES} ${TEST_SOURCES})
 target_link_libraries(test-algorithm algorithmLib Catch2::Catch2)
+set(CMAKE_BUILD_TYPE Debug)

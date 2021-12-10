@@ -232,36 +232,6 @@ src/SCC.cpp.s:
 	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/SCC.cpp.s
 .PHONY : src/SCC.cpp.s
 
-src/centrality.o: src/centrality.cpp.o
-
-.PHONY : src/centrality.o
-
-# target to build an object file
-src/centrality.cpp.o:
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/centrality.cpp.o
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/centrality.cpp.o
-.PHONY : src/centrality.cpp.o
-
-src/centrality.i: src/centrality.cpp.i
-
-.PHONY : src/centrality.i
-
-# target to preprocess a source file
-src/centrality.cpp.i:
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/centrality.cpp.i
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/centrality.cpp.i
-.PHONY : src/centrality.cpp.i
-
-src/centrality.s: src/centrality.cpp.s
-
-.PHONY : src/centrality.s
-
-# target to generate assembly for a file
-src/centrality.cpp.s:
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/src/centrality.cpp.s
-	cd /home/anshulb3/cs225git/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/algorithmLib.dir/build.make algorithm/CMakeFiles/algorithmLib.dir/src/centrality.cpp.s
-.PHONY : src/centrality.cpp.s
-
 tests/test.o: tests/test.cpp.o
 
 .PHONY : tests/test.o
@@ -333,9 +303,6 @@ help:
 	@echo "... src/SCC.o"
 	@echo "... src/SCC.i"
 	@echo "... src/SCC.s"
-	@echo "... src/centrality.o"
-	@echo "... src/centrality.i"
-	@echo "... src/centrality.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"

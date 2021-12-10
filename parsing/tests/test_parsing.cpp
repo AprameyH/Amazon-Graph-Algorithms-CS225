@@ -38,18 +38,26 @@ TEST_CASE("Test Parsing to Find Neighbor Nodes") {
         std::string filename = "../parsing/tests/test_graph3.txt";
         Graph graph(filename);
         std::unordered_map<int, Node> &nodes = graph.getNodes();
-        std::vector<Node*> nodeTwoNeighbors = nodes[2].getNeighbors();
-        REQUIRE(nodeTwoNeighbors[0]->getID() == 3);
-        std::vector<Node*> nodeFourNeighbors = nodes[4].getNeighbors();
-        REQUIRE(nodeFourNeighbors[0]->getID() == 5);
+        std::vector<Node*> nodeOneNeighbors = nodes[1].getNeighbors();
+        REQUIRE(nodeOneNeighbors[0]->getID() == 2);
+        std::vector<Node*> nodeThreeNeighbors = nodes[3].getNeighbors();
+        REQUIRE(nodeThreeNeighbors[0]->getID() == 4);
     }
-
 
     // SECTION("Test Amazon data") {
     //     std::string filename = "../data/amazon0601.txt";
     //     Graph graph(filename);
     //     std::unordered_map<int, Node> &nodes = graph.getNodes();
-    //     int size = nodes.size();
-    //     REQUIRE(size == 403394);
+
+    //     int max_node = 0;
+    //     for (auto& node : nodes) {
+    //         int node_id = node.first;
+    //         if (node_id > max_node) {
+    //             max_node = node_id;
+    //         }
+    //     }
+
+
+    //     REQUIRE(max_node == nodes.size() - 1);
     // }
 }
