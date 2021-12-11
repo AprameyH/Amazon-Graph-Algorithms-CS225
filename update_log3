@@ -1,0 +1,1 @@
+We fixed the Parser to work with our Graph class. Moreover, we cleaned up minor bugs and added boilerplate code for our BFS algorithm. Added some initial test cases. We implemented Betweeness Centrality and created an algorithms folder (moving BFS into it). 
