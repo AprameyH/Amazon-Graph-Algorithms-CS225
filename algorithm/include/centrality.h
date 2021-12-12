@@ -20,6 +20,8 @@ class Centrality {
      */
     std::unordered_map<int, double> nodeCentrality(Parser::Graph G);
 
+    std::unordered_map<int, double> betweenness;
+
   public:
     /**
      * @brief Construct a new Centrality object.
@@ -27,7 +29,7 @@ class Centrality {
      */
     Centrality(Parser::Graph G);
 
-    std::unordered_map<int, double> betweenness;
+    
 
     double getBetweenness(int nodeIdx);
     
