@@ -91,12 +91,14 @@ vector<int> SCC::getConnectedComponents() {
     return lows;
 }
 
-int SCC::CountComponents() {
+int SCC::CountComponents() {   
+    
     std::unordered_map<int, bool> tracker;
     int count = 0;
     for (int elem : lows) {
         // if not in our tracker map then its a new component
         if (tracker.find(elem) == tracker.end()) {
+            // add this SCC to tracker so we don't double count it.
             tracker[elem] = true;
             count++;
         }

@@ -53,28 +53,21 @@ TEST_CASE("BFS")
     //     REQUIRE(distances.count(4) == 0);
     // }
 
-    // SECTION("Test BFS on amazon graph") {
-    //     std::string filename = "../data/amazon0601.txt";
-    //     Graph graph(filename);
-    //     std::unordered_map<int, int> distances = graph.BFS(0);
-    //     int size = distances.size();
-    //     REQUIRE(size == 402793);
-    // }
-
-    SECTION("DFS on simple undirected graph")
-    {
-        std::string filename = "../parsing/tests/test_graph1.txt";
+    SECTION("Test BFS on amazon graph") {
+        std::string filename = "../data/amazon0601.txt";
         Graph graph(filename);
-        std::unordered_map<int, bool> distances = graph.DFSRecur(0);
-        //node 0 = root
-        REQUIRE(distances[4] == true);
-    }
+        std::unordered_map<int, int> distances = graph.BFS(0);
 
+        int size = distances.size();
+        REQUIRE(size == 402793);
+        REQUIRE(distances[5] == 15);
+    }
     SECTION("Test DFS on Amazon Graph") {
         std::string filename = "../data/amazon0601.txt";
         Graph graph(filename);
-        std::unordered_map<int, bool> distances = graph.DFSRecur(0);
-        int size = distances.size();
+        std::unordered_map<int, bool> path_exists = graph.DFS(0);
+
+        int size = path_exists.size();
         REQUIRE(size == 402793);
     }
 
