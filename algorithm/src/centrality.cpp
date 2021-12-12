@@ -10,18 +10,19 @@ Centrality::Centrality(Graph G) {
 
 std::unordered_map<int, double> Centrality::nodeCentrality(Parser::Graph g) {
   unordered_map<int, double> Cb;
+  for (pair<int, Node> w : g.getNodes()) {
+    Cb[w.first] = 0;
+  }
   for (pair<int, Node> s : g.getNodes()) {
     stack<Node> S;
     map<Node,vector<Node>> P; 
-    map<Node,int> sig;
-    map<Node,int> d;
-    map<Node, int> del;
-    for (pair<int, Node> w : g.getNodes()) {
+    map<Node,double> sig;
+    map<Node,double> d;
+    map<Node, double> del;
+    for (pair<double, Node> w : g.getNodes()) {
       P[w.second] = {};
       sig[w.second] = 0;
       d[w.second] = -1;
-      del[w.second] = 0;
-      Cb[w.first] = 0;
     }
     sig[s.second] = 1;
     d[s.second] = 0;
@@ -44,15 +45,18 @@ std::unordered_map<int, double> Centrality::nodeCentrality(Parser::Graph g) {
         //shortest path to w via v
         if (d[*w] == d[v] + 1) {
             sig[*w] += sig[v];
-            P[*w].push_back(v);
+            P.at(*w).push_back(v);
         }
       }
+    }
+    for (pair<int, Node> w : g.getNodes()) {
+      del[w.second] = 0;
     }
     // S returns vertices in order of non-increasing distance from s
     while (!S.empty()) {
       Node w = S.top();
       S.pop();
-      for (Node v : P[w]) {
+      for (Node v : P.at(w)) {
         del[v] = del[v] + (sig[v] / sig[w]) * (1 + del[w]);
       }
       if (w.getID() != s.first) {
