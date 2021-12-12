@@ -25,6 +25,12 @@ namespace Parser {
 
     std::unordered_map<int, int> BFS(int start_id);
 
+    std::unordered_map<int, bool> DFS(int start_id);
+
+    std::unordered_map<int, bool> DFSRecur(int start_id);
+
+    std::unordered_map<int, bool> DFSRecurHelper(int start_id, std::unordered_map<int, bool>& visited);
+
     std::unordered_map<int, Node>& getNodes();
 
     std::vector<Node*> getNeighbors(int id);

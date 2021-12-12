@@ -8,17 +8,20 @@
 using Parser::Graph;
 using std::vector;
 
-
 class SCC {
-    SCC(Graph& g);
+    public:
+        SCC(Graph& g);
 
-    void TarjanAlgo(Graph& g);
+        void TarjanAlgo(Graph& g);
 
-    void TarjanUtil(int u, Graph& g, vector<int>& disc, vector<bool>& stackMember, std::stack<int>& st);
+        void TarjanUtil(int u, Graph& g, vector<int>& disc, vector<bool>& stackMember, std::stack<int>& st);
 
-    vector<int> lows;
+        vector<int> lows;
 
-    bool areConnected(int node1_id, int node2_id);
+        bool areConnected(int node1_id, int node2_id);
 
+        vector<int> getConnectedComponents();
+
+        int CountComponents();
     
 };

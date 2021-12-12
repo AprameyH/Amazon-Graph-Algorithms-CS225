@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <queue>
+#include <stack>
 
 namespace Parser {
 
@@ -88,6 +89,57 @@ namespace Parser {
       }
       return dist_from_root;
   }
+
+ std::unordered_map<int, bool> Graph::DFS(int start_id) {
+    std::unordered_map<int, bool> visited_nodes;
+
+    std::stack<Node*> stack;
+    stack.push(&nodes[start_id]);
+
+        while (!stack.empty())
+    {
+        // Pop a vertex from stack and print it
+        Node* curr = stack.top();
+        stack.pop();
+ 
+        // Stack may contain same vertex twice. So
+        // we need to print the popped item only
+        // if it is not visited.
+        if (!visited_nodes[curr->getID()]) {
+            std::cout << curr->getID() << " ";
+            visited_nodes[curr->getID()] = true;
+        }
+        // Get all adjacent vertices of the popped vertex s
+        // If a adjacent has not been visited, then push it
+        // to the stack.
+        for (Node* neighbor : curr->getNeighbors()) {
+            if (!visited_nodes[neighbor->getID()]) {
+              stack.push(neighbor);
+            }
+        }
+    }
+    return visited_nodes;
+ }
+
+std::unordered_map<int, bool> Graph::DFSRecur(int start_id) {
+  std::unordered_map<int, bool> visited;
+  return DFSRecurHelper(start_id, visited);
+}
+
+ std::unordered_map<int, bool> Graph::DFSRecurHelper(int start_id, std::unordered_map<int, bool>& visited) {
+
+   visited[start_id] = true;
+   
+   for (Node* neighbor : nodes[start_id].getNeighbors()) {
+     int id = neighbor->getID();
+     if (visited.count(id) == 0) {
+       DFSRecurHelper(id, visited);
+     }
+   }
+
+   return visited;
+ }
+
 
   std::unordered_map<int, Node>& Graph::getNodes() {
       return nodes;
