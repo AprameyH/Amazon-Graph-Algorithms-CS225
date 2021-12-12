@@ -38,6 +38,13 @@ namespace Parser {
       void addNeighbor(Node* neighbor);
 
       std::vector<Node*> getNeighbors();
+      
+      bool operator< (const Node other)  const {
+        if (other.id_ < this->id_) {
+          return false;
+        }
+        return true;
+      };
 
     private:
         unsigned id_ = 0;

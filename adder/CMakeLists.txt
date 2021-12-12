@@ -40,3 +40,4 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 add_executable(test-adder ${SOURCES} ${TEST_SOURCES})
 target_link_libraries(test-adder AdderLib Catch2::Catch2)
+set(CMAKE_BUILD_TYPE Debug)

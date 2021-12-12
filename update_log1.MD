@@ -1,0 +1,1 @@
+We had problems working with GDB, so we worked on it to debug our tests. We talked with the CA and they advised us to examine Makefiles, and then we looked through Google for a while. We went to office hours and they helped us figure the problem out.
