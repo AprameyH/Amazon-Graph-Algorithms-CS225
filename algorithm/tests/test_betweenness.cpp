@@ -1,8 +1,9 @@
-#include "catch2/catch.hpp"
 #include "../../../parsing/include/graph.h"
+#include "catch2/catch.hpp"
 #include "include/centrality.h"
 #include <iostream>
 #include <unordered_map>
+#define DBL_MAX (9.999999999999999e99)
 using namespace std;
 using namespace Parser;
 
@@ -42,9 +43,19 @@ TEST_CASE("Betweenness test") {
     Graph G = Graph("./tests/multiple_shortest_paths.txt");
     Centrality c = Centrality(G);
     REQUIRE(c.getBetweenness(0) == 0.0);
-    REQUIRE(c.getBetweenness(1) == 1.0/3.0);
-    REQUIRE(c.getBetweenness(2) == 1.0/3.0);
-    REQUIRE(c.getBetweenness(3) == 1.0/3.0);
+    REQUIRE(c.getBetweenness(1) == 1.0 / 3.0);
+    REQUIRE(c.getBetweenness(2) == 1.0 / 3.0);
+    REQUIRE(c.getBetweenness(3) == 1.0 / 3.0);
     REQUIRE(c.getBetweenness(4) == 0.0);
+  }
+
+  SECTION("Sorted by betweenness") {
+    Graph G = Graph("./tests/undirected_graph_1.txt");
+    Centrality c = Centrality(G);
+    double previous = DBL_MAX;
+    for (auto it : c.getSortedList()) {
+      REQUIRE(it.second <= previous);
+      previous = it.second;
+    }
   }
 }

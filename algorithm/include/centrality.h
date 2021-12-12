@@ -29,8 +29,7 @@ class Centrality {
      */
     Centrality(Parser::Graph G);
 
-    
-
     double getBetweenness(int nodeIdx);
-    
+
+    std::vector<std::pair<int, double>> getSortedList() const;
 };

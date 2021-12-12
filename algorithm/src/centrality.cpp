@@ -70,3 +70,18 @@ std::unordered_map<int, double> Centrality::nodeCentrality(Parser::Graph g) {
 double Centrality::getBetweenness(int nodeIndex) {
     return this->betweenness[nodeIndex];
 }
+
+vector<std::pair<int, double>> Centrality::getSortedList() const {
+  vector<pair<int, double>> sorted;
+
+  // Copy key-value pair from Map
+  // to vector of pairs
+  for (auto &it : betweenness) {
+    sorted.push_back(it);
+  }
+
+  // Sort using comparator function
+  std::sort(sorted.begin(), sorted.end(), [](pair<int, double> a, pair<int, double> b) { return a.second > b.second; });
+
+  return sorted;
+}
