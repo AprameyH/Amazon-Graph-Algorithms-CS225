@@ -5,7 +5,7 @@
 #include <queue>
 #include <vector>
 #include <map>
-
+#include <fstream>
 
 
 class Centrality {
@@ -20,6 +20,8 @@ class Centrality {
      */
     std::unordered_map<int, double> nodeCentrality(Parser::Graph G);
 
+    std::unordered_map<int, double> betweenness;
+
   public:
     /**
      * @brief Construct a new Centrality object.
@@ -27,8 +29,9 @@ class Centrality {
      */
     Centrality(Parser::Graph G);
 
-    std::unordered_map<int, double> betweenness;
-
     double getBetweenness(int nodeIdx);
-    
+
+    std::vector<std::pair<int, double>> getSortedList() const;
+
+    void writeToFile(std::string filePath) const;
 };

@@ -41,11 +41,13 @@ namespace Parser {
       
       bool operator< (const Node other)  const {
         if (other.id_ < this->id_) {
-          return false;
+          return true;
         }
-        return true;
+        return false;
       };
-
+      bool operator==(const Node other) const {
+        return this->id_ == other.id_;
+      }
     private:
         unsigned id_ = 0;
         static unsigned num_nodes_;
