@@ -5,7 +5,7 @@
 #include <queue>
 #include <vector>
 #include <map>
-
+#include <fstream>
 
 
 class Centrality {
@@ -32,4 +32,6 @@ class Centrality {
     double getBetweenness(int nodeIdx);
 
     std::vector<std::pair<int, double>> getSortedList() const;
+
+    void writeToFile(std::string filePath) const;
 };

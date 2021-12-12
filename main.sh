@@ -7,4 +7,4 @@
 # cd src/
 # ./main "$@"
 # cd ..
-# ./$MAIN
+#q ./$MAIN

@@ -58,4 +58,10 @@ TEST_CASE("Betweenness test") {
       previous = it.second;
     }
   }
+
+  SECTION("Test write to file") {
+    Graph G = Graph("./tests/undirected_graph_1.txt");
+    Centrality c = Centrality(G);
+    c.writeToFile("./tests/testOutput.txt");
+  }
 }

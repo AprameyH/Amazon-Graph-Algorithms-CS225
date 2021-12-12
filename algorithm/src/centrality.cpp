@@ -74,14 +74,25 @@ double Centrality::getBetweenness(int nodeIndex) {
 vector<std::pair<int, double>> Centrality::getSortedList() const {
   vector<pair<int, double>> sorted;
 
-  // Copy key-value pair from Map
-  // to vector of pairs
+
   for (auto &it : betweenness) {
     sorted.push_back(it);
   }
-
-  // Sort using comparator function
   std::sort(sorted.begin(), sorted.end(), [](pair<int, double> a, pair<int, double> b) { return a.second > b.second; });
 
   return sorted;
+}
+
+void Centrality::writeToFile(string filePath) const {
+  ofstream myfile;
+  myfile.open(filePath);
+  if (myfile.is_open()){
+  myfile << "Node: Betweenness\n";
+  for (pair<int, double> &val : getSortedList()) {
+    myfile << val.first << ": "<<val.second<<"\n";
+  }
+  myfile.close();
+  } else {
+    cout<< "Could not open file"<<endl;
+  }
 }
