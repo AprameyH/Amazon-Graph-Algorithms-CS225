@@ -10,20 +10,22 @@ using std::vector;
 
 class SCC {
     public:
-        SCC(Graph& g);
+            SCC(Graph& g);
 
-        void TarjanAlgo(Graph& g);
+            bool areConnected(int node1_id, int node2_id);
 
-        void TarjanUtil(int u, Graph& g, vector<int>& disc, vector<bool>& stackMember, std::stack<int>& st);
+            vector<int> getConnectedComponents();
 
-        vector<int> lows;
+            int CountComponents();
 
-        bool areConnected(int node1_id, int node2_id);
+            void getStronglyConnectedComponent(int node_id, std::string filePath);
 
-        vector<int> getConnectedComponents();
+        private:
 
-        int CountComponents();
+            vector<int> lows;
 
-        void getStronglyConnectedComponent(int node_id, std::string filePath);
+            void TarjanAlgo(Graph& g);
+
+            void TarjanUtil(int u, Graph& g, vector<int>& disc, vector<bool>& stackMember, std::stack<int>& st);
     
 };
