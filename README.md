@@ -14,19 +14,20 @@ The amazon dataset and the subset used for betweenness centrality are located in
 
 # Build and run the executable
 1. Clone the repository
-
+2. `cd` into the repository
+ 
 Run the following commands
 
-2. chmod +x ./bake.sh
-3. chmod +x ./main.sh
-4. ./bake.sh
+3. `$ chmod +x ./bake.sh`
+4. `$ chmod +x ./main.sh`
+5. `$ ./bake.sh`
 
 Running the executable
 
-5. ./main.sh
+6. `$ ./main.sh`
 
 
 # Build and run the test suite
 The test suite runs tests (in the tests folder) in parsing and algorithm
-1. ./bake.sh
-2. ./test.sh
+1. `$ ./bake.sh`
+2. `$ ./test.sh`
