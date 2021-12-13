@@ -31,7 +31,7 @@ The data shows that among the first 1000 nodes, the amazon products represented 
 Checking the betweenness value of a specific node can be very useful to identify whether a product is performing satisfactorily.
 
 
-# BFS algorithm to find Shortest Distance from node to other nodes
+## BFS algorithm to find Shortest Distance from node to other nodes
 We implemented the BFS algorithm and used it to find the length of the shortest path from a particular node to all the other reachable nodes. We then wrote this output to a file. We tested our algorithm on the following graphs(one graph with two-way connections, one with one-way connections, and one unconnected graph).
 
 ![bfs1](images/bfs1.png)
