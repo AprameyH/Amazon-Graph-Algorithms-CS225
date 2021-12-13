@@ -31,10 +31,13 @@ The data shows that among the first 1000 nodes, the amazon products represented 
 Checking the betweenness value of a specific node can be very useful to identify whether a product is performing satisfactorily.
 
 
-# Breadth First Search
+# BFS algorithm to find Shortest Distance from node to other nodes
+We implemented the BFS algorithm and used it to find the length of the shortest path from a particular node to all the other reachable nodes. We then wrote this output to a file. We tested our algorithm on the following graphs(one graph with two-way connections, one with one-way connections, and one unconnected graph).
 
-Insert text
+![bfs1](images/bfs1.png)
+
+We then ran the BFS on our large Amazon graph from node 0 and here were our results.
 
 ![bfs0](images/bfs0.png)
 
-It is impressive that in the massive dataset of 403,394 nodes, you can reach almost any other product in less than 35 clicks starting at product 0.
+Overall, the large majority of nodes in the graph were reachable from node 0, and despite the fact that there were over 400,000 nodes in the graph, the longest shortest path between nodes was only 35. We could use this data to find the products that are more strongly and more weakly related to a particular item(depending on the length of the shortest path between them) and find the items that aren’t related at all to that item(there exists no path between the items). 
