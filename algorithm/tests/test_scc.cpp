@@ -7,7 +7,7 @@ using Parser::Graph;
 
 TEST_CASE("Test Strongly Connected Components")
 {
-    SECTION("Test Graph 1: Small 3 Strongly Connected Components Graph")
+    SECTION("Test on small graph")
     {
         std::string filename = "../algorithm/tests/test_SCC_graph1.txt";
         Graph graph(filename);
@@ -21,7 +21,7 @@ TEST_CASE("Test Strongly Connected Components")
         REQUIRE(scc.areConnected(3, 4) == false);
     }
 
-    SECTION("Test Graph 2: Large 3 Strongly Connected Components Graph")
+    SECTION("Test on larger graph")
     {
         std::string filename = "../algorithm/tests/test_SCC_graph2.txt";
         Graph graph(filename);
@@ -39,7 +39,7 @@ TEST_CASE("Test Strongly Connected Components")
         REQUIRE(scc.areConnected(4, 7) == false);
     }
 
-    SECTION("Test Graph 2: 3 Strongly Connected Components")
+    SECTION("Test on directed acyclic graph(one component per node)")
     {
         std::string filename = "../algorithm/tests/test_SCC_graph3.txt";
         Graph graph(filename);
