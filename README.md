@@ -12,7 +12,7 @@ The primary main file that runs all of our algorithms is also located in the alg
 The amazon dataset and the subset used for betweenness centrality are located in the data folder. Our results from running all of our algorithms are located in the results folder.
 
 
-# Building and running the executable
+# Build and run the executable
 1. Clone the repository
 
 Run the following commands
@@ -26,7 +26,7 @@ Running the executable
 5. ./main.sh
 
 
-# How to build and run the test suite
+# Build and run the test suite
 The test suite runs tests (in the tests folder) in parsing and algorithm
 1. ./bake.sh
 2. ./test.sh
