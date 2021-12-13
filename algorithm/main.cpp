@@ -27,8 +27,8 @@ int main() {
   Graph graph(filename);
 
   SCC scc(graph);
-  scc.getStronglyConnectedComponent(0, "../results/SCCResults0.txt");
-  scc.getStronglyConnectedComponent(32, "../results/SCCResults1.txt");
+  scc.printStronglyConnectedComponent(0, "../results/SCCResults0.txt");
+  scc.printStronglyConnectedComponent(32, "../results/SCCResults1.txt");
   std::cout<<"SCC data written to file"<<std::endl;
 
   // Writing amazon betweenness data to a file

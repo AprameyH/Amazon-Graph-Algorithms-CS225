@@ -84,9 +84,9 @@ TEST_CASE("Test Strongly Connected Components")
     //     SCC scc(graph);
     //     int size = graph.getNodes().size();
     //     std::cout << size << std::endl;
-    //     int count = scc.CountComponents();
+    //     int count = scc.countComponents();
     //     REQUIRE(count == 1588);
 
-    //     scc.getStronglyConnectedComponent(32, "SCCResults.txt");
+    //     scc.printStronglyConnectedComponent(32, "SCCResults.txt");
     // }
 }

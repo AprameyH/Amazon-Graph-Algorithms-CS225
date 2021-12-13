@@ -3,17 +3,9 @@
 using std::string;
 
 namespace Parser {
-    unsigned Node::num_nodes_;
     
     Node::Node(int id) {
         id_ = id;
-    }
-    Node::Node() {
-        
-    }
-
-    Node::~Node() {
-        num_nodes_--;
     }
 
     unsigned Node::getID() {
@@ -27,6 +19,4 @@ namespace Parser {
     std::vector<Node*> Node::getNeighbors() {
         return neighbors;
     }
-
-    
 }

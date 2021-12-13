@@ -7,11 +7,11 @@ using std::pair;
 using std::string;
 
 SCC::SCC(Graph& g) {
-    TarjanAlgo(g);
+    tarjanAlgo(g);
 
 }
 
-void SCC::TarjanAlgo(Graph& g) {
+void SCC::tarjanAlgo(Graph& g) {
     int N = g.size();
     int UNVISITED = -1;
 
@@ -22,12 +22,12 @@ void SCC::TarjanAlgo(Graph& g) {
 
     for (int i = 0; i < N; i++) {
         if (disc[i] == UNVISITED) {
-            TarjanUtil(i, g, disc, stackMember, st);
+            tarjanUtil(i, g, disc, stackMember, st);
         }
     }
 }
 
-void SCC::TarjanUtil(int u, Graph& g, vector<int>& disc, vector<bool>& stackMember, std::stack<int>& st) {
+void SCC::tarjanUtil(int u, Graph& g, vector<int>& disc, vector<bool>& stackMember, std::stack<int>& st) {
     int UNVISITED = -1; 
     // A static variable is used for simplicity, we can avoid use
     // of static variable by passing a pointer.
@@ -96,7 +96,7 @@ vector<int> SCC::getConnectedComponents() {
     return lows;
 }
 
-int SCC::CountComponents() {   
+int SCC::countComponents() {   
     
     std::unordered_map<int, bool> tracker;
     int count = 0;
@@ -112,7 +112,7 @@ int SCC::CountComponents() {
     return count;
 }
 
-void SCC::getStronglyConnectedComponent(int node_id, string filePath) {
+void SCC::printStronglyConnectedComponent(int node_id, string filePath) {
     int component_num = lows[node_id];
 
     vector<int> component;
