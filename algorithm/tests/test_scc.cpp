@@ -66,13 +66,27 @@ TEST_CASE("Test Strongly Connected Components")
         REQUIRE(!scc.areConnected(1, 3));
         REQUIRE(!scc.areConnected(3, 4));
     }
-
-    SECTION("Test on real graph") {
-         std::string filename = "../data/amazon0601.txt";
-         Graph graph(filename);
+    SECTION("Test Graph 2: blank graph")
+    {
+        std::string filename = "../algorithm/tests/test_SCC_emptyGraph";
+        Graph graph(filename);
 
         SCC scc(graph);
-        int count = scc.CountComponents();
-        REQUIRE(count == 1588);
+        // vector<int> conn_comp = scc.getConnectedComponents();
+
+        REQUIRE(scc.getConnectedComponents().size() == 0);
     }
+
+    // SECTION("Test on real graph") {
+    //      std::string filename = "../data/amazon0601.txt";
+    //      Graph graph(filename);
+
+    //     SCC scc(graph);
+    //     int size = graph.getNodes().size();
+    //     std::cout << size << std::endl;
+    //     int count = scc.CountComponents();
+    //     REQUIRE(count == 1588);
+
+    //     scc.getStronglyConnectedComponent(32, "SCCResults.txt");
+    // }
 }

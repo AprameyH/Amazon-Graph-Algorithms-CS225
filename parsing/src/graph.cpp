@@ -58,7 +58,12 @@ namespace Parser {
 
   // returns a hashmap with the key being a node id and the value being the distance from the start node to that particular node.
   std::unordered_map<int, int> Graph::BFS(int start_id) {
+      
       std::unordered_map<int, int> dist_from_root;
+      // if start id is not in map, return empty map since there are no paths from that node since it doesn't exist
+      if (nodes.find(start_id) == nodes.end()) {
+        return dist_from_root;
+      }
     
       std::unordered_map<int, bool> visited_nodes;
 
@@ -90,6 +95,8 @@ namespace Parser {
       return dist_from_root;
   }
 
+  
+
  std::unordered_map<int, bool> Graph::DFS(int start_id) {
     std::unordered_map<int, bool> visited_nodes;
 
@@ -120,6 +127,7 @@ namespace Parser {
     }
     return visited_nodes;
  }
+ 
 
 std::unordered_map<int, bool> Graph::DFSRecur(int start_id) {
   std::unordered_map<int, bool> visited;
