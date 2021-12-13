@@ -1,8 +1,10 @@
 #include "../include/SCC.h"
 #include <tuple>
+#include <fstream>
 
 using Parser::Node;
 using std::pair;
+using std::string;
 
 SCC::SCC(Graph& g) {
     TarjanAlgo(g);
@@ -105,6 +107,30 @@ int SCC::CountComponents() {
         
     }
     return count;
+}
+
+void SCC::getStronglyConnectedComponent(int node_id, string filePath) {
+    int component_num = lows[node_id];
+
+    vector<int> component;
+    for (int i = 0; i < lows.size(); i++) {
+        if (lows[i] == component_num) {
+            component.push_back(i);
+        }
+    }
+
+    // write component to file
+    std::ofstream myfile;
+    myfile.open(filePath);
+    if (myfile.is_open()){
+        myfile << "All nodes that are part of same SCC as node" << node_id << "\n";
+        for (auto& node : component) {
+            myfile << node << ", ";
+        }
+        myfile.close();
+    } else {
+        std::cout<< "Could not open file"<< std::endl;
+    }
 }
     
 // int UNVISITED = -1; 

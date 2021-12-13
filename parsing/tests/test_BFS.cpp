@@ -61,14 +61,26 @@ TEST_CASE("BFS")
         int size = distances.size();
         REQUIRE(size == 402793);
         REQUIRE(distances[5] == 1);
-    }
-    SECTION("Test DFS on Amazon Graph") {
-        std::string filename = "../data/amazon0601.txt";
-        Graph graph(filename);
-        std::unordered_map<int, bool> path_exists = graph.DFS(0);
 
-        int size = path_exists.size();
-        REQUIRE(size == 402793);
+        ofstream myfile;
+        myfile.open("results.txt");
+        if (myfile.is_open()){
+            myfile << "length of shortest path from Node 0\n";
+            for (auto& length : distances) {
+                myfile << length.first << ": "<<length.second<<"\n";
+            }
+            myfile.close();
+        } else {
+            cout<< "Could not open file"<<endl;
+        }
     }
+    // SECTION("Test DFS on Amazon Graph") {
+    //     std::string filename = "../data/amazon0601.txt";
+    //     Graph graph(filename);
+    //     std::unordered_map<int, bool> path_exists = graph.DFS(0);
+
+    //     int size = path_exists.size();
+    //     REQUIRE(size == 402793);
+    // }
 
 }

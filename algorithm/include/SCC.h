@@ -23,5 +23,7 @@ class SCC {
         vector<int> getConnectedComponents();
 
         int CountComponents();
+
+        void getStronglyConnectedComponent(int node_id, std::string filePath);
     
 };
