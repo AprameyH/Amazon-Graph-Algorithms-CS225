@@ -14,10 +14,10 @@ add_compile_options(-std=c++11)
 set(UTILS util.cpp util.h)
 add_library(Utils ${UTILS})
 
-target_include_directories(Utils PUBLIC "../parsing/include" "../a_star/include" "../bfs/include" "../pagerank/include")
+target_include_directories(Utils PUBLIC "../parsing/include" "../algorithm/include")
 
-link_directories("../parsing" "../bfs" "../a_star" "../pagerank")
-target_link_libraries(Utils ParsingLib BFSLib AStarLib PageRankLib)
+link_directories("../parsing" "../algorithm")
+target_link_libraries(Utils ParsingLib algorithmLib)
 
 add_executable(main main.cpp)
 target_link_libraries(main Utils)
