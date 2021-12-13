@@ -20,7 +20,7 @@ In our project proposal, we had hypothesized that knowing the SCCs of our graph 
 We used Brandes' algorithm to calculate the betweenness centrality of every node in the graph that runs in ϴ(ve + v^2logn) on directed graphs.
 We wrote an initial method that calculated the betweenness values for each node in the graph and called it in the constructor. To allow us to work with our results, we wrote a method that took a nodeId and returned its computed betweenness value, a method that returned all the betweenness values as a sorted list, and a method that wrote this sorted data to a file.
 
-Unfortunately, when we attempted to run the algorithm on our dataset with 403394 nodes and 3387388 edges, we realized that we would not be able to finish running the algorithm on any of our machines. Instead, we calculated the betweenness values for the first 1000 nodes.
+Unfortunately, when we attempted to run the algorithm on our dataset with 403,394 nodes and 3,387,388 edges, we realized that we would not be able to finish running the algorithm on any of our machines. Instead, we calculated the betweenness values for the first 1000 nodes.
 
 ![bc1](images/bc1.png)
 
@@ -29,3 +29,12 @@ The data shows that among the first 1000 nodes, the amazon products represented 
 ![bc2](images/bc2.png)
 
 Checking the betweenness value of a specific node can be very useful to identify whether a product is performing satisfactorily.
+
+
+# Breadth First Search
+
+Insert text
+
+![bfs0](images/bfs0.png)
+
+It is impressive that in the massive dataset of 403,394 nodes, you can reach almost any other product in less than 35 clicks starting at product 0.
