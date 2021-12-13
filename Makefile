@@ -170,45 +170,6 @@ ParsingLib/fast:
 .PHONY : ParsingLib/fast
 
 #=============================================================================
-# Target rules for targets named test-adder
-
-# Build rule for target.
-test-adder: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-adder
-.PHONY : test-adder
-
-# fast build rule for target.
-test-adder/fast:
-	$(MAKE) $(MAKESILENT) -f adder/CMakeFiles/test-adder.dir/build.make adder/CMakeFiles/test-adder.dir/build
-.PHONY : test-adder/fast
-
-#=============================================================================
-# Target rules for targets named main-adder
-
-# Build rule for target.
-main-adder: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main-adder
-.PHONY : main-adder
-
-# fast build rule for target.
-main-adder/fast:
-	$(MAKE) $(MAKESILENT) -f adder/CMakeFiles/main-adder.dir/build.make adder/CMakeFiles/main-adder.dir/build
-.PHONY : main-adder/fast
-
-#=============================================================================
-# Target rules for targets named AdderLib
-
-# Build rule for target.
-AdderLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AdderLib
-.PHONY : AdderLib
-
-# fast build rule for target.
-AdderLib/fast:
-	$(MAKE) $(MAKESILENT) -f adder/CMakeFiles/AdderLib.dir/build.make adder/CMakeFiles/AdderLib.dir/build
-.PHONY : AdderLib/fast
-
-#=============================================================================
 # Target rules for targets named test-algorithm
 
 # Build rule for target.
@@ -255,13 +216,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... AdderLib"
 	@echo "... ParsingLib"
 	@echo "... algorithmLib"
-	@echo "... main-adder"
 	@echo "... main-algorithm"
 	@echo "... main-parsing"
-	@echo "... test-adder"
 	@echo "... test-algorithm"
 	@echo "... test-parsing"
 .PHONY : help
