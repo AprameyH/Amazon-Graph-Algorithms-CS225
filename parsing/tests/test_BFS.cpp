@@ -60,7 +60,7 @@ TEST_CASE("BFS")
 
         int size = distances.size();
         REQUIRE(size == 402793);
-        REQUIRE(distances[5] == 15);
+        REQUIRE(distances[5] == 1);
     }
     SECTION("Test DFS on Amazon Graph") {
         std::string filename = "../data/amazon0601.txt";

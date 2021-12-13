@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# ./bake.sh
+ ./bake.sh
 
-# ./test.sh
+ ./test.sh
 
 cd src
 ./main "$@"

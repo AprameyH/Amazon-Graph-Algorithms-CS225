@@ -106,7 +106,7 @@ namespace Parser {
         // we need to print the popped item only
         // if it is not visited.
         if (!visited_nodes[curr->getID()]) {
-            std::cout << curr->getID() << " ";
+            
             visited_nodes[curr->getID()] = true;
         }
         // Get all adjacent vertices of the popped vertex s
