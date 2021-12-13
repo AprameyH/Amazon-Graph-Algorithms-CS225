@@ -4,6 +4,4 @@
 
  ./test.sh
 
-cd src
-./main "$@"
-cd ..
+ ./main.sh

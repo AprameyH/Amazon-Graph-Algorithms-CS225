@@ -74,7 +74,5 @@ TEST_CASE("Test Strongly Connected Components")
         SCC scc(graph);
         int count = scc.CountComponents();
         REQUIRE(count == 1588);
-
-        scc.getStronglyConnectedComponent(0, "SCCResults.txt");
     }
 }
