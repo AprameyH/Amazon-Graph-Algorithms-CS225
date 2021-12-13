@@ -289,33 +289,6 @@ tests/test.cpp.s:
 	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/tests/test.cpp.s
 .PHONY : tests/test.cpp.s
 
-tests/test_algoritm.o: tests/test_algoritm.cpp.o
-
-.PHONY : tests/test_algoritm.o
-
-# target to build an object file
-tests/test_algoritm.cpp.o:
-	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/tests/test_algoritm.cpp.o
-.PHONY : tests/test_algoritm.cpp.o
-
-tests/test_algoritm.i: tests/test_algoritm.cpp.i
-
-.PHONY : tests/test_algoritm.i
-
-# target to preprocess a source file
-tests/test_algoritm.cpp.i:
-	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/tests/test_algoritm.cpp.i
-.PHONY : tests/test_algoritm.cpp.i
-
-tests/test_algoritm.s: tests/test_algoritm.cpp.s
-
-.PHONY : tests/test_algoritm.s
-
-# target to generate assembly for a file
-tests/test_algoritm.cpp.s:
-	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/tests/test_algoritm.cpp.s
-.PHONY : tests/test_algoritm.cpp.s
-
 tests/test_betweenness.o: tests/test_betweenness.cpp.o
 
 .PHONY : tests/test_betweenness.o
@@ -343,6 +316,33 @@ tests/test_betweenness.cpp.s:
 	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/tests/test_betweenness.cpp.s
 .PHONY : tests/test_betweenness.cpp.s
 
+tests/test_scc.o: tests/test_scc.cpp.o
+
+.PHONY : tests/test_scc.o
+
+# target to build an object file
+tests/test_scc.cpp.o:
+	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/tests/test_scc.cpp.o
+.PHONY : tests/test_scc.cpp.o
+
+tests/test_scc.i: tests/test_scc.cpp.i
+
+.PHONY : tests/test_scc.i
+
+# target to preprocess a source file
+tests/test_scc.cpp.i:
+	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/tests/test_scc.cpp.i
+.PHONY : tests/test_scc.cpp.i
+
+tests/test_scc.s: tests/test_scc.cpp.s
+
+.PHONY : tests/test_scc.s
+
+# target to generate assembly for a file
+tests/test_scc.cpp.s:
+	cd /home/apramey2/finalproject/rduquet2-rahuls9-apramey2-anshulb3 && $(MAKE) $(MAKESILENT) -f algorithm/CMakeFiles/test-algorithm.dir/build.make algorithm/CMakeFiles/test-algorithm.dir/tests/test_scc.cpp.s
+.PHONY : tests/test_scc.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -366,12 +366,12 @@ help:
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
-	@echo "... tests/test_algoritm.o"
-	@echo "... tests/test_algoritm.i"
-	@echo "... tests/test_algoritm.s"
 	@echo "... tests/test_betweenness.o"
 	@echo "... tests/test_betweenness.i"
 	@echo "... tests/test_betweenness.s"
+	@echo "... tests/test_scc.o"
+	@echo "... tests/test_scc.i"
+	@echo "... tests/test_scc.s"
 .PHONY : help
 
 

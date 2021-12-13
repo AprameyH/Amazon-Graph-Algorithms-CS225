@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.1)
 
 # Specify the C++ standard (CMake3+)
 add_compile_options(-std=c++11)
@@ -23,6 +23,7 @@ add_executable(main-parsing main.cpp)
 target_link_libraries(main-parsing ParsingLib)
 
 target_include_directories(main-parsing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
 
 
 # Add Catch2

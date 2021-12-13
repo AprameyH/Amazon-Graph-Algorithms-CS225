@@ -2,7 +2,6 @@
 
 #include <stdint.h>
 #include <string>
-#include "edge.h"
 #include <vector>
 
 namespace Parser {
