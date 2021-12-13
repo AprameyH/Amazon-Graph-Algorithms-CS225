@@ -123,7 +123,8 @@ void SCC::getStronglyConnectedComponent(int node_id, string filePath) {
     std::ofstream myfile;
     myfile.open(filePath);
     if (myfile.is_open()){
-        myfile << "All nodes that are part of same SCC as node" << node_id << "\n";
+        myfile << "There are " << component.size() << " nodes that are apart of the same Strongly Connected Component as node " << node_id << " \n";
+        myfile << "All nodes that are part of the same Strongly Connected Component as node " << node_id << "\n";
         for (auto& node : component) {
             myfile << node << ", ";
         }
