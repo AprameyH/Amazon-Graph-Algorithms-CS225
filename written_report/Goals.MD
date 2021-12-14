@@ -1,7 +1,7 @@
 # Project Goals
 
 ## Leading Question
-We will use the Amazon network dataset to create a graph and run BFS, Betweenness Centrality, and Strongly Connected Components. We will be creating a search tool that will allow us to find Amazon products that would significantly reduce the efficiency of search tools if removed. We will accomplish this by using Betweenness Centrality to find central nodes and BFS to find their shortest paths. Our search tool will also identify strongly connected components and prioritize their recommendation.
+We will use the Amazon network dataset to create a graph and run BFS, Betweenness Centrality, and Strongly Connected Components. We will be creating a search tool that will allow us to find Amazon products that would significantly reduce the efficiency of search tools if removed. We will accomplish this by using Betweenness Centrality to find central nodes and BFS to find the lengths of their shortest paths. Our search tool will also identify strongly connected components and prioritize their recommendation.
 
 ## Dataset Acquisition and Processing
 We will be using the Amazon Networks dataset provided by Stanford Large Network Dataset Collection. We will download the dataset from the Stanford Large Network Dataset Collection website and we will store the data in our repository. We will have a Node class and a hashmap with a Node as the key and maps to a list of Nodes that are its neighbors. We will parse the dataset line by line, each line representing a new value to be added to a key, assuming it has the same value as the previous line. If there is a line that doesn’t give us 2 nodes, we will ignore the line itself.
