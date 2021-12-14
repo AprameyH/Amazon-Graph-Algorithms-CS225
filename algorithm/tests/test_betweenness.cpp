@@ -7,7 +7,7 @@
 using namespace std;
 using namespace Parser;
 
-TEST_CASE("Betweenness smalle graph") {
+TEST_CASE("Betweenness small graph") {
   SECTION("Checking beetweenness value") {
     Graph G = Graph("./tests/smaller_test.txt");
     Centrality c = Centrality(G);

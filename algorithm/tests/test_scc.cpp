@@ -4,8 +4,8 @@
 
 using Parser::Graph;
 
-TEST_CASE("SCC test graph 1") {
-  SECTION("Checking SCC on small") {
+TEST_CASE("Checking SCC on small graph") {
+  SECTION("SCC test graph 1") {
     std::string filename = "./tests/test_SCC_graph1.txt";
     Graph graph(filename);
 
@@ -36,30 +36,17 @@ TEST_CASE("SCC test on larger graph") {
   } 
 }
 
-TEST_CASE("SCC test on graph 3") {
-  SECTION("Test on directed acyclic graph(one component per node)")
-    {
-        std::string filename = "./tests/test_SCC_graph3.txt";
-        Graph graph(filename);
+TEST_CASE("Test on directed acyclic graph(one component per node)") {
+  SECTION("SCC test on graph 3") {
+    std::string filename = "./tests/test_SCC_graph3.txt";
+    Graph graph(filename);
 
-        SCC scc(graph);
+    SCC scc(graph);
 
-        REQUIRE(!scc.areConnected(0, 1));
-        REQUIRE(!scc.areConnected(1, 2));
-        REQUIRE(!scc.areConnected(1, 3));
-        REQUIRE(!scc.areConnected(3, 4));
-    }
-    SECTION("Test Graph 2: 3 Strongly Connected Components")
-    {
-        std::string filename = "./tests/test_SCC_graph3.txt";
-        Graph graph(filename);
-
-        SCC scc(graph);
-
-        REQUIRE(!scc.areConnected(0, 1));
-        REQUIRE(!scc.areConnected(1, 2));
-        REQUIRE(!scc.areConnected(1, 3));
-        REQUIRE(!scc.areConnected(3, 4));
+    REQUIRE(!scc.areConnected(0, 1));
+    REQUIRE(!scc.areConnected(1, 2));
+    REQUIRE(!scc.areConnected(1, 3));
+    REQUIRE(!scc.areConnected(3, 4));
     }
 }
 
