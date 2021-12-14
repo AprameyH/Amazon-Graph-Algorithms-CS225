@@ -7,8 +7,8 @@
 using namespace std;
 using namespace Parser;
 
-TEST_CASE("Betweenness test") {
-  SECTION("Smaller_graph") {
+TEST_CASE("Betweenness smalle graph") {
+  SECTION("Checking beetweenness value") {
     Graph G = Graph("./tests/smaller_test.txt");
     Centrality c = Centrality(G);
     REQUIRE(c.getBetweenness(1) == 0.0);
@@ -16,7 +16,11 @@ TEST_CASE("Betweenness test") {
     REQUIRE(c.getBetweenness(3) == 0);
     REQUIRE(c.getBetweenness(4) == 1);
   }
-  SECTION("Undirected_graph_1") {
+}
+
+TEST_CASE("Betweenness undirected graph 1") {
+  //Betweenness values are doubled for undirected graphs
+  SECTION("Checking beetweenness value") {
     Graph G = Graph("./tests/undirected_graph_1.txt");
     Centrality c = Centrality(G);
     REQUIRE(c.getBetweenness(1) / 2 == 3);
@@ -29,7 +33,10 @@ TEST_CASE("Betweenness test") {
     REQUIRE(c.getBetweenness(8) / 2 == 0);
     REQUIRE(c.getBetweenness(9) / 2 == 0);
   }
-  SECTION("Undirected_graph_2") {
+}
+
+TEST_CASE("Betweenness undirected graph 2") {
+  SECTION("Checking beetweenness value") {
     Graph G = Graph("./tests/undirected_graph_2.txt");
     Centrality c = Centrality(G);
     REQUIRE(c.getBetweenness(1) == 0);
@@ -39,7 +46,10 @@ TEST_CASE("Betweenness test") {
     REQUIRE(c.getBetweenness(5) == 0);
     REQUIRE(c.getBetweenness(6) == 0);
   }
-  SECTION("Multiple_shortest_paths") {
+}
+
+TEST_CASE("Betweenness multiple shortest paths") {
+  SECTION("Checking beetweenness value") {
     Graph G = Graph("./tests/multiple_shortest_paths.txt");
     Centrality c = Centrality(G);
     REQUIRE(c.getBetweenness(0) == 0.0);
@@ -48,8 +58,10 @@ TEST_CASE("Betweenness test") {
     REQUIRE(c.getBetweenness(3) == 1.0 / 3.0);
     REQUIRE(c.getBetweenness(4) == 0.0);
   }
+}
 
-  SECTION("Sorted by betweenness") {
+TEST_CASE("Betweenness sorted by betweenness") {
+  SECTION("Checking sort") {
     Graph G = Graph("./tests/undirected_graph_1.txt");
     Centrality c = Centrality(G);
     double previous = DBL_MAX;
@@ -58,10 +70,29 @@ TEST_CASE("Betweenness test") {
       previous = it.second;
     }
   }
+}
 
-  SECTION("Test write to file") {
+TEST_CASE("Test write to file") {
+  SECTION("Checking beetweenness value") {
     Graph G = Graph("./tests/undirected_graph_1.txt");
     Centrality c = Centrality(G);
     c.writeToFile("./tests/testOutput.txt");
+  }
+}
+
+TEST_CASE("Test on empty graph") {
+  SECTION("Check empty map") {
+    Graph G = Graph("./tests/empty_text.txt");
+    Centrality c = Centrality(G);
+    REQUIRE(c.getBetweenness(5000) == -1);
+  }
+}
+
+TEST_CASE("Test on two node graph") {
+  SECTION("Check betweenness") {
+    Graph G = Graph("./tests/two_nodes_graph.txt");
+    Centrality c = Centrality(G);
+    REQUIRE(c.getBetweenness(0) == 0);
+    REQUIRE(c.getBetweenness(1) == 0);
   }
 }

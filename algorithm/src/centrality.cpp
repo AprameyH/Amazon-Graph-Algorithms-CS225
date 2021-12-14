@@ -68,6 +68,9 @@ std::unordered_map<int, double> Centrality::nodeCentrality(Parser::Graph g) {
 }
 
 double Centrality::getBetweenness(int nodeIndex) {
+  if (this->betweenness.find(nodeIndex) == this->betweenness.end()) {
+    return -1;
+  }
     return this->betweenness[nodeIndex];
 }
 
